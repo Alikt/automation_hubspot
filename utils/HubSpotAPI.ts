@@ -3,7 +3,7 @@ export class HubSpotAPI {
     accessToken: string;
 
     constructor() {
-        this.baseURL = 'https://api.hubapi.com';
+        this.baseURL = process.env.BASE_API_URL;
         this.accessToken = process.env.HUBSPOT_ACCESS_TOKEN || '';
         if (!this.accessToken) {
             throw new Error('HUBSPOT_ACCESS_TOKEN is not set in environment variables');

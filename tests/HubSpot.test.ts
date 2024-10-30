@@ -32,10 +32,10 @@ test.describe('Add/Remove contacts', () => {
 
 
         // Navigate to a page that requires authentication
-        await page.goto('https://app.hubspot.com/home');
+        await page.goto(process.env.BASE_SITE_URL + '/home');
 
         // Wait for a successful login indicator
-        await page.waitForURL('https://app.hubspot.com/user-guide/47899083?via=home');
+        await page.waitForURL(process.env.BASE_SITE_URL + '/user-guide/47899083?via=home');
 
 
     });
@@ -88,6 +88,5 @@ test.describe('Add/Remove contacts', () => {
         }
     });
 });
-
 
 
